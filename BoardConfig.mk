@@ -23,7 +23,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-# inherit from common hi6250-common
--include device/huawei/hi6250-common/BoardConfigCommon.mk
+# inherit from common hi3660-common
+-include device/huawei/hi3660-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/huawei/figo
+DEVICE_PATH := device/huawei/victoria

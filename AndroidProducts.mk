@@ -24,4 +24,4 @@
 # components.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_figo.mk
+    $(LOCAL_DIR)/lineage_victoria.mk

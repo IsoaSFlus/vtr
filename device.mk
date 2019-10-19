@@ -24,13 +24,14 @@
 # components.
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_arm64_ab.mk)
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/huawei/figo/figo-vendor.mk)
+$(call inherit-product-if-exists, vendor/huawei/victoria/victoria-vendor.mk)
 
-PRODUCT_AAPT_CONFIG := normal
+#PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
+#PRODUCT_AAPT_PREBUILT_DPI := xxhdpi xhdpi hdpi
 
 # Local overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -38,8 +39,17 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2160
+TARGET_SCREEN_HEIGHT := 1920 
 TARGET_SCREEN_WIDTH := 1080
 
-# Inherit from hi6250-common
-$(call inherit-product, device/huawei/hi6250-common/hi6250.mk)
+# Lawnchair
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/etc/permissions/privapp-permissions-lawnchair.xml:system/etc/permissions/privapp-permissions-lawnchair.xml \
+    $(LOCAL_PATH)/prebuilt/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml:system/etc/sysconfig/lawnchair-hiddenapi-package-whitelist.xml
+
+PRODUCT_PACKAGES += \
+    Lawnchair
+
+
+# Inherit from hi3660-common
+$(call inherit-product, device/huawei/hi3660-common/hi3660.mk)

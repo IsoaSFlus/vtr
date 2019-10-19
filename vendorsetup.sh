@@ -23,4 +23,4 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-add_lunch_combo lineage_figo-userdebug
+add_lunch_combo lineage_victoria-userdebug
