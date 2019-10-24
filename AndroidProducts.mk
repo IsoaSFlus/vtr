@@ -25,3 +25,7 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/lineage_victoria.mk
+
+COMMON_LUNCH_CHOICES := \
+    lineage_victoria-userdebug
+
