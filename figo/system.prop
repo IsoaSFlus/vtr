@@ -1,0 +1,16 @@
+# Audio
+ro.config.media_vol_steps=25
+ro.config.vc_call_vol_steps=10
+
+# Display
+qemu.hw.mainkeys=0
+
+# Perf
+ro.vendor.qti.sys.fw.bg_apps_limit=60
+
+# RIL
+persist.radio.multisim.config=dsds
+ro.telephony.default_network=9,9
+
+# USB
+ro.cust.cdrom=/dev/null
